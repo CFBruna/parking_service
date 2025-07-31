@@ -8,7 +8,7 @@ class Customer(models.Model):
         on_delete=models.PROTECT,
         blank=True,
         null=True,
-        related_name='customers',
+        related_name='customer',
         verbose_name='Usuário',
     )
     name = models.CharField(max_length=100, verbose_name='Nome')
@@ -36,6 +36,7 @@ class Customer(models.Model):
     class Meta:
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
+        ordering = ['name']
     
     def __str__(self):
         return self.name
