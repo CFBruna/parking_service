@@ -81,4 +81,4 @@ class Vehicle(models.Model):
         verbose_name_plural = 'Veículos'
 
     def __str__(self):
-        return self.license_plate
+        return f'{self.license_plate} - {self.brand} {self.model}'
