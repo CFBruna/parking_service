@@ -5,42 +5,103 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
-        ('vehicles', '0001_initial'),
+        ("vehicles", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ParkingSpot',
+            name="ParkingSpot",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('spot_number', models.CharField(max_length=10, unique=True, verbose_name='Número da Vaga')),
-                ('is_occupied', models.BooleanField(default=False, verbose_name='Ocupado')),
-                ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='Criado em')),
-                ('updated_at', models.DateTimeField(auto_now=True, verbose_name='Atualizado em')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "spot_number",
+                    models.CharField(
+                        max_length=10, unique=True, verbose_name="Número da Vaga"
+                    ),
+                ),
+                (
+                    "is_occupied",
+                    models.BooleanField(default=False, verbose_name="Ocupado"),
+                ),
+                (
+                    "created_at",
+                    models.DateTimeField(auto_now_add=True, verbose_name="Criado em"),
+                ),
+                (
+                    "updated_at",
+                    models.DateTimeField(auto_now=True, verbose_name="Atualizado em"),
+                ),
             ],
             options={
-                'verbose_name': 'Vaga',
-                'verbose_name_plural': 'Vagas',
+                "verbose_name": "Vaga",
+                "verbose_name_plural": "Vagas",
             },
         ),
         migrations.CreateModel(
-            name='ParkingRecord',
+            name="ParkingRecord",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('entry_time', models.DateTimeField(auto_now_add=True, verbose_name='Horário de Entrada')),
-                ('exit_time', models.DateTimeField(blank=True, null=True, verbose_name='Horário de Saída')),
-                ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='Criado em')),
-                ('updated_at', models.DateTimeField(auto_now=True, verbose_name='Atualizado em')),
-                ('vehicle', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='parking_records', to='vehicles.vehicle', verbose_name='Veículo')),
-                ('parking_spot', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='parking_records', to='parking.parkingspot', verbose_name='Veículo')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "entry_time",
+                    models.DateTimeField(
+                        auto_now_add=True, verbose_name="Horário de Entrada"
+                    ),
+                ),
+                (
+                    "exit_time",
+                    models.DateTimeField(
+                        blank=True, null=True, verbose_name="Horário de Saída"
+                    ),
+                ),
+                (
+                    "created_at",
+                    models.DateTimeField(auto_now_add=True, verbose_name="Criado em"),
+                ),
+                (
+                    "updated_at",
+                    models.DateTimeField(auto_now=True, verbose_name="Atualizado em"),
+                ),
+                (
+                    "vehicle",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="parking_records",
+                        to="vehicles.vehicle",
+                        verbose_name="Veículo",
+                    ),
+                ),
+                (
+                    "parking_spot",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="parking_records",
+                        to="parking.parkingspot",
+                        verbose_name="Veículo",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Registro',
-                'verbose_name_plural': 'Registros',
+                "verbose_name": "Registro",
+                "verbose_name_plural": "Registros",
             },
         ),
     ]
