@@ -5,3 +5,4 @@ djangorestframework_simplejwt
 psycopg2-binary
 python-decouple
 dj-database-url
+django-rql
