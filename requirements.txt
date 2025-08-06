@@ -78,3 +78,5 @@ tzdata==2025.2
     # via django
 uritemplate==4.2.0
     # via drf-spectacular
+whitenoise==6.9.0
+    # via -r requirements.in

@@ -28,5 +28,4 @@ __pycache__
 .vscode/
 
 # Arquivos de dependência do pip-tools
-*.txt
 *.in
