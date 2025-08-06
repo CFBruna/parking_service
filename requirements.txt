@@ -36,6 +36,8 @@ djangorestframework-simplejwt==5.5.1
     # via -r requirements.in
 drf-spectacular==0.28.0
     # via -r requirements.in
+gunicorn==23.0.0
+    # via -r requirements.in
 inflection==0.5.1
     # via drf-spectacular
 jsonschema==4.25.0
@@ -46,6 +48,8 @@ lark-parser==0.11.0
     # via lib-rql
 lib-rql==2.0.2
     # via django-rql
+packaging==25.0
+    # via gunicorn
 psycopg2-binary==2.9.10
     # via -r requirements.in
 pyjwt==2.10.1

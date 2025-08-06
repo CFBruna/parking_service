@@ -7,3 +7,4 @@ python-decouple
 dj-database-url
 django-rql
 drf-spectacular
+gunicorn
