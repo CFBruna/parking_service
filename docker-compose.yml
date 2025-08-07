@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    command: gunicorn --bind 0.0.0.0:8000 parking_service.wsgi:application
+
     volumes:
       - .:/usr/src/app
       - static_volume:/usr/src/app/staticfiles
