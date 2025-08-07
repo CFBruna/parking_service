@@ -12,6 +12,10 @@ attrs==25.3.0
     #   referencing
 cachetools==6.1.0
     # via lib-rql
+colorama==0.4.6
+    # via pytest
+coverage[toml]==7.10.2
+    # via pytest-cov
 dj-database-url==3.0.1
     # via -r requirements.in
 django==5.2.4
@@ -46,6 +50,8 @@ gunicorn==23.0.0
     # via -r requirements.in
 inflection==0.5.1
     # via drf-spectacular
+iniconfig==2.1.0
+    # via pytest
 jsonschema==4.25.0
     # via drf-spectacular
 jsonschema-specifications==2025.4.1
@@ -55,11 +61,28 @@ lark-parser==0.11.0
 lib-rql==2.0.2
     # via django-rql
 packaging==25.0
-    # via gunicorn
+    # via
+    #   gunicorn
+    #   pytest
+pluggy==1.6.0
+    # via
+    #   pytest
+    #   pytest-cov
 psycopg2-binary==2.9.10
     # via -r requirements.in
+pygments==2.19.2
+    # via pytest
 pyjwt==2.10.1
     # via djangorestframework-simplejwt
+pytest==8.4.1
+    # via
+    #   -r requirements.in
+    #   pytest-cov
+    #   pytest-django
+pytest-cov==6.2.1
+    # via -r requirements.in
+pytest-django==4.11.1
+    # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via lib-rql
 python-decouple==3.8

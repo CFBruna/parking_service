@@ -11,3 +11,6 @@ gunicorn
 whitenoise
 Faker
 Faker-vehicle
+pytest
+pytest-django
+pytest-cov
