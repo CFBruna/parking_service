@@ -15,5 +15,5 @@ class VehicleAdmin(admin.ModelAdmin):
     search_fields = ["license_plate", "model"]
     list_filter = ["vehicle_type"]
 
-
-# Register your models here.
+    class Media:
+        js = ("js/vehicle_admin.js",)

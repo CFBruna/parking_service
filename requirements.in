@@ -9,3 +9,5 @@ django-rql
 drf-spectacular
 gunicorn
 whitenoise
+Faker
+Faker-vehicle

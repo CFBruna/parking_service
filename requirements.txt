@@ -36,6 +36,12 @@ djangorestframework-simplejwt==5.5.1
     # via -r requirements.in
 drf-spectacular==0.28.0
     # via -r requirements.in
+faker==37.5.3
+    # via
+    #   -r requirements.in
+    #   faker-vehicle
+faker-vehicle==0.2.0
+    # via -r requirements.in
 gunicorn==23.0.0
     # via -r requirements.in
 inflection==0.5.1
@@ -75,7 +81,9 @@ sqlparse==0.5.3
 typing-extensions==4.14.1
     # via referencing
 tzdata==2025.2
-    # via django
+    # via
+    #   django
+    #   faker
 uritemplate==4.2.0
     # via drf-spectacular
 whitenoise==6.9.0
