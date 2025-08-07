@@ -5,7 +5,7 @@
 ![Django REST Framework](https://img.shields.io/badge/DRF-3.16-red.svg)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Test Coverage](https://img.shields.io/badge/Coverage-97%25-brightgreen.svg)](https://github.com/actions)
-[![CI](https://github.com/CFBruna/parking_service/actions/workflows/ci.yml/badge.svg)](https://github.com/CFBruna/parking_service/actions)
+[![CI](https://github.com/CFBruna/parking_service/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/CFBruna/parking_service/actions)
 
 **Status do Projeto:** ✅ Versão 1.0 (Completo) ✅
 
