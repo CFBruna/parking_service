@@ -4,7 +4,7 @@
 ![Django](https://img.shields.io/badge/Django-5.2-darkgreen.svg)
 ![Django REST Framework](https://img.shields.io/badge/DRF-3.16-red.svg)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Test Coverage](https://img.shields.io/badge/Coverage-97%25-brightgreen.svg)](https://github.com/actions)
+[![Test Coverage](https://img.shields.io/badge/Coverage-96%25-brightgreen.svg)](https://github.com/actions)
 [![CI](https://github.com/CFBruna/parking_service/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/CFBruna/parking_service/actions)
 
 **Status do Projeto:** ✅ Versão 1.0 (Completo) ✅
@@ -34,6 +34,10 @@ Como solução pragmática e profissional, foi implementado um endpoint (`/api/v
 
 Essa abordagem demonstra a capacidade de contornar limitações do mundo real, garantindo uma experiência de usuário fluida e permitindo que o sistema funcione de forma completa e independente, sem depender de serviços externos.
 
+## Evolução da Arquitetura: Camada de Serviço
+
+Com o objetivo de seguir as melhores práticas de design de software, como o Princípio da Responsabilidade Única (SRP), a lógica de negócio para consulta e criação de veículos foi extraída da camada de API (views.py) e isolada em uma camada de serviço dedicada (services.py). Essa refatoração tornou o código mais limpo, reutilizável e muito mais fácil de testar, demonstrando um compromisso com a manutenibilidade a longo prazo do projeto.
+
 ## Tech Stack & Ferramentas
 
 O projeto foi construído com foco em qualidade, manutenibilidade e práticas modernas de desenvolvimento.
@@ -42,7 +46,7 @@ O projeto foi construído com foco em qualidade, manutenibilidade e práticas mo
 * **Banco de Dados:** PostgreSQL
 * **Containerização:** Docker, Docker Compose
 * **Gerenciamento de Dependências:** `pip` e `pip-tools` (`pip-compile`)
-* **Testes:** `pytest`, `pytest-django`, `pytest-cov` (com **97% de cobertura**)
+* **Testes:** `pytest`, `pytest-django`, `pytest-cov` (com **96% de cobertura**)
 * **Qualidade de Código:** `Ruff` para linting e formatação, `pre-commit` para automação de checks de qualidade.
 * **Autenticação:** `djangorestframework-simplejwt` para JWT.
 * **Documentação da API:** `drf-spectacular` para geração automática de schemas OpenAPI 3.
